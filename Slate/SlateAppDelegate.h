@@ -37,7 +37,6 @@
   IBOutlet NSWindow *windowInfo;
   IBOutlet NSWindow *configHelper;
   IBOutlet NSTextView *configHelperTextView;
-  NSStatusItem *statusItem;
   NSWindowController *windowInfoController;
   NSWindowController *configHelperController;
   HintOperation *currentHintOperation;

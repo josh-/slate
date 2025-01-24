@@ -177,8 +177,6 @@ static EventHandlerRef modifiersEvent;
   for (NSValue *hotKeyRef in [self currentModalHotKeyRefs]) {
     UnregisterEventHotKey([hotKeyRef pointerValue]);
   }
-  // reset status image
-  [statusItem setImage:[NSImage imageNamed:@"status"]];
   currentModalKey = nil;
 }
 
@@ -247,8 +245,6 @@ static EventHandlerRef modifiersEvent;
         [[self currentModalHotKeyRefs] addObject:[NSValue valueWithPointer:myHotKeyRef]];
       }
       [self setCurrentModalKey:modalKey];
-      // change status image
-      [statusItem setImage:[NSImage imageNamed:@"statusActive"]];
       return noErr;
     }
   }
@@ -490,13 +486,6 @@ OSStatus OnModifiersChangedEvent(EventHandlerCallRef nextHandler, EventRef theEv
 
   //NSMenuItem *configInfoItem = [statusMenu insertItemWithTitle:@"Configuration Helper" action:@selector(configurationHelper) keyEquivalent:@"" atIndex:2];
   //[configInfoItem setTarget:self];
-
-  statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength: NSVariableStatusItemLength];
-  [statusItem setMenu:statusMenu];
-  NSImage *statusImage = [NSImage imageNamed:@"status"];
-  [statusImage setTemplate:YES];
-  [statusItem setImage:statusImage];
-  [statusItem setHighlightMode:YES];
 
   // Ensure no timer exists
   @synchronized(timerLock) {
