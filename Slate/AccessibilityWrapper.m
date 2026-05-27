@@ -114,6 +114,12 @@ static NSDictionary *unselectableApps = nil;
 - (BOOL)moveWindow:(NSPoint)thePoint {
   CFTypeRef _position;
   _position = (CFTypeRef)(AXValueCreate(kAXValueCGPointType, (const void *)&thePoint));
+    
+  // Suppress implicit animations added in macOS Tahoe 26
+  [NSAnimationContext beginGrouping];
+  [[NSAnimationContext currentContext] setDuration:0];
+  [[NSAnimationContext currentContext] setAllowsImplicitAnimation:NO];
+    
   if (AXUIElementSetAttributeValue(window, (CFStringRef)NSAccessibilityPositionAttribute, (CFTypeRef *)_position) != kAXErrorSuccess) {
     SlateLogger(@"ERROR: Could not change position");
     if (_position != NULL) CFRelease(_position);
@@ -126,6 +132,12 @@ static NSDictionary *unselectableApps = nil;
 - (BOOL)resizeWindow:(NSSize)theSize {
   CFTypeRef _size;
   _size = (CFTypeRef)(AXValueCreate(kAXValueCGSizeType, (const void *)&theSize));
+
+  // Suppress implicit animations added in macOS Tahoe 26
+  [NSAnimationContext beginGrouping];
+  [[NSAnimationContext currentContext] setDuration:0];
+  [[NSAnimationContext currentContext] setAllowsImplicitAnimation:NO];
+
   if (AXUIElementSetAttributeValue(window, (CFStringRef)NSAccessibilitySizeAttribute, (CFTypeRef *)_size) != kAXErrorSuccess) {
     SlateLogger(@"ERROR: Could not change size");
     if (_size != NULL) CFRelease(_size);
