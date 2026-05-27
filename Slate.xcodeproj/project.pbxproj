@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005740012863DBCE00E88FBE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00573FFF2863DBCA00E88FBE /* Sparkle.framework */; };
-		005740022863DBCE00E88FBE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00573FFF2863DBCA00E88FBE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3AA7D09116A6ED1200C81A67 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7D09016A6ED1200C81A67 /* WebKit.framework */; };
+3AA7D09116A6ED1200C81A67 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA7D09016A6ED1200C81A67 /* WebKit.framework */; };
 		3AA7D09516A6EE0200C81A67 /* JSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7D09416A6EE0200C81A67 /* JSController.m */; };
 		3AA7D09D16A6FC9B00C81A67 /* initialize.js in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7D09A16A6FAE100C81A67 /* initialize.js */; };
 		3B1E86EE16B3627A001B9090 /* JSOperationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E86ED16B3627A001B9090 /* JSOperationWrapper.m */; };
@@ -118,7 +116,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				005740022863DBCE00E88FBE /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,8 +124,7 @@
 
 /* Begin PBXFileReference section */
 		00573FFB2863D91200E88FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		00573FFF2863DBCA00E88FBE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		0335291A2D3E5E7200F6EF7F /* Slate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Slate.entitlements; sourceTree = "<group>"; };
+0335291A2D3E5E7200F6EF7F /* Slate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Slate.entitlements; sourceTree = "<group>"; };
 		3AA7D09016A6ED1200C81A67 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3AA7D09316A6EE0200C81A67 /* JSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSController.h; sourceTree = "<group>"; };
 		3AA7D09416A6EE0200C81A67 /* JSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSController.m; sourceTree = "<group>"; };
@@ -305,7 +301,6 @@
 				47C4A2C81384E8B10066B6DE /* Carbon.framework in Frameworks */,
 				47C4A2941384E8890066B6DE /* Cocoa.framework in Frameworks */,
 				3AA7D09116A6ED1200C81A67 /* WebKit.framework in Frameworks */,
-				005740012863DBCE00E88FBE /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +551,6 @@
 		47C4A2921384E8890066B6DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00573FFF2863DBCA00E88FBE /* Sparkle.framework */,
 				47C4A2C71384E8B10066B6DE /* Carbon.framework */,
 				47C4A2931384E8890066B6DE /* Cocoa.framework */,
 				47C4A2951384E8890066B6DE /* Other Frameworks */,
